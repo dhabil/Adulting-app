@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/quiz-filtered.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Inter:500,600|Work+Sans:400,700,500,400italic,600|Lato:400,700,500,400italic,600");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+    <input type="hidden" id="anPageName" name="page" value="quiz-filtered" />
+    <div class="container-center-horizontal">
+      <div class="quiz-filtered screen">
+        <img class="flame-upgrade-1-C61RwL" src="img/flame-upgrade-1-1@2x.svg" />
+        <div class="finance-C61RwL valign-text-bottom worksans-semi-bold-black-24px">Finance</div>
+        <div class="cooking-C61RwL valign-text-bottom worksans-semi-bold-black-24px">Cooking</div>
+        <div class="mental-health-C61RwL valign-text-bottom worksans-semi-bold-black-24px">Mental Health</div>
+        <div class="quiz-scroll-C61RwL">
+          <div class="cards-Mjxp6s">
+            <div class="group-9-G5qNiT"></div>
+            <img class="union-G5qNiT" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i32611073009635-G5qNiT worksans-semi-bold-white-16px">Taxes</div>
+            <img class="flame-768-2-G5qNiT" src="img/flame-768-2-1@2x.svg" />
+          </div>
+          <div class="cards-EvLy6T">
+            <div class="group-9-8kshWX"></div>
+            <img class="union-8kshWX" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i32611083009635-8kshWX worksans-semi-bold-white-16px">Investing</div>
+            <img class="flame-768-2-8kshWX" src="img/flame-768-2-1@2x.svg" />
+          </div>
+          <div class="cards-DIIlhS">
+            <div class="group-9-trhDBz"></div>
+            <img class="union-trhDBz" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i32611093009635-trhDBz worksans-semi-bold-white-16px">Savings</div>
+            <img class="flame-768-2-trhDBz" src="img/flame-768-2-1@2x.svg" />
+          </div>
+          <div class="cards-mt9vxI">
+            <div class="group-9-fC7HwU"></div>
+            <img class="union-fC7HwU" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i32611103009635-fC7HwU worksans-semi-bold-white-16px">Financial Literacy</div>
+            <img class="flame-768-2-fC7HwU" src="img/flame-768-2-1@2x.svg" />
+          </div>
+          <div class="cards-U0XjgD">
+            <div class="group-9-qxAFrH"></div>
+            <img class="union-qxAFrH" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i32611113009635-qxAFrH worksans-semi-bold-white-16px">Loans</div>
+            <img class="flame-768-2-qxAFrH" src="img/flame-768-2-1@2x.svg" />
+          </div>
+          <img class="line-33-Mjxp6s" src="img/line-33@1x.svg" />
+          <div class="cards-o2tvwc">
+            <div class="group-9-LlJCS2"></div>
+            <img class="union-LlJCS2" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3386833009635-LlJCS2 worksans-semi-bold-white-16px">Debt</div>
+            <img class="flame-768-2-LlJCS2" src="img/flame-768-2-1@2x.svg" />
+          </div>
+        </div>
+        <a href="quiz-finance.html">
+          <div class="group-95-C61RwL">
+            <div class="view-all-IUHrKR valign-text-bottom">View All</div>
+            <img class="icon-IUHrKR" src="img/icon-21@2x.svg" /></div
+        ></a>
+        <div class="group-96-C61RwL">
+          <div class="view-all-3U5qE3 valign-text-bottom">View All</div>
+          <img class="icon-3U5qE3" src="img/icon-21@2x.svg" />
+        </div>
+        <div class="group-97-C61RwL">
+          <div class="view-all-ixNXIO valign-text-bottom">View All</div>
+          <img class="icon-ixNXIO" src="img/icon-21@2x.svg" />
+        </div>
+        <div class="quiz-scroll-VMr6Om">
+          <div class="cards-4dStg1">
+            <div class="group-9-gr4W9z"></div>
+            <img class="union-gr4W9z" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3386923009635-gr4W9z worksans-semi-bold-white-16px">Knife Basics</div>
+          </div>
+          <div class="cards-LLbdXd">
+            <div class="group-9-DCNqKq"></div>
+            <img class="union-DCNqKq" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3386933009635-DCNqKq worksans-semi-bold-white-16px">Sauces &amp; Broths</div>
+          </div>
+          <div class="cards-axkU2c">
+            <div class="group-9-04UHYJ"></div>
+            <img class="union-04UHYJ" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3386943009635-04UHYJ worksans-semi-bold-white-16px">Cooking Methods</div>
+          </div>
+          <div class="cards-kvJHBL">
+            <div class="group-9-rcdLFm"></div>
+            <img class="union-rcdLFm" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3386953009635-rcdLFm worksans-semi-bold-white-16px">Seasoning</div>
+          </div>
+          <div class="cards-orudIe">
+            <div class="group-9-H3o6qY"></div>
+            <img class="union-H3o6qY" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3386963009635-H3o6qY worksans-semi-bold-white-16px">Flavour Matching</div>
+          </div>
+          <img class="line-33-4dStg1" src="img/line-33@1x.svg" />
+          <div class="cards-PPHUxJ">
+            <div class="group-9-rMtlal"></div>
+            <img class="union-rMtlal" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3386983009635-rMtlal worksans-semi-bold-white-16px">Safety &amp; Hygiene</div>
+          </div>
+          <img class="vector-creator-23-1-4dStg1" src="img/vector-creator--23--1@1x.svg" />
+          <img class="vector-creator-23-2-4dStg1" src="img/vector-creator--23--1@1x.svg" />
+          <img class="vector-creator-23-3-4dStg1" src="img/vector-creator--23--1@1x.svg" />
+          <img class="vector-creator-23-4-4dStg1" src="img/vector-creator--23--1@1x.svg" />
+          <img class="vector-creator-23-5-4dStg1" src="img/vector-creator--23--1@1x.svg" />
+          <img class="vector-creator-23-6-4dStg1" src="img/vector-creator--23--1@1x.svg" />
+        </div>
+        <div class="quiz-scroll-mental-health-C61RwL">
+          <div class="cards-rRDvTC">
+            <div class="group-9-Qsibh2"></div>
+            <img class="union-Qsibh2" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3389253009635-Qsibh2 worksans-semi-bold-white-16px">Mindfulness</div>
+          </div>
+          <div class="cards-nX5quJ">
+            <div class="group-9-xnku0n"></div>
+            <img class="union-xnku0n" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3389263009635-xnku0n worksans-semi-bold-white-16px">Self-esteem</div>
+          </div>
+          <img class="flame-768-3-rRDvTC" src="img/flame-768-3@2x.svg" />
+          <div class="cards-S8bcJ1">
+            <div class="group-9-wxx3xd"></div>
+            <img class="union-wxx3xd" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3389283009635-wxx3xd worksans-semi-bold-white-16px">Gratitude</div>
+          </div>
+          <div class="cards-uUKZpI">
+            <div class="group-9-1LKbn0"></div>
+            <img class="union-1LKbn0" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3389293009635-1LKbn0 worksans-semi-bold-white-16px">Impulse Control</div>
+          </div>
+          <div class="cards-jNlOMr">
+            <div class="group-9-S5MEHZ"></div>
+            <img class="union-S5MEHZ" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i3389303009635-S5MEHZ worksans-semi-bold-white-16px">Coping Mechanisms</div>
+          </div>
+          <img class="line-33-rRDvTC" src="img/line-33@1x.svg" />
+          <img class="flame-768-2-rRDvTC" src="img/flame-768-3@2x.svg" />
+          <img class="flame-768-4-rRDvTC" src="img/flame-768-3@2x.svg" />
+          <img class="flame-768-5-rRDvTC" src="img/flame-768-3@2x.svg" />
+          <img class="flame-768-6-rRDvTC" src="img/flame-768-3@2x.svg" />
+          <div class="cards-Mo4Sx5">
+            <div class="group-9-MDbIjY"></div>
+            <img class="union-MDbIjY" src="img/union-14@2x.svg" />
+            <div class="quiz-name-here-i33810413009635-MDbIjY worksans-semi-bold-white-16px">
+              Relaxation<br />techniques
+            </div>
+          </div>
+          <img class="flame-768-6-nX5quJ" src="img/flame-768-3@2x.svg" />
+        </div>
+        <div class="header-C61RwL">
+          <img class="union-IcPKRJ" src="img/union-20@2x.svg" />
+          <div class="i-phone-x-11-pro-IcPKRJ">
+            <div class="i-phone-x-11-pro-black-M9CKJ3">
+              <div class="bg-W8ROXu"><img class="notch-DawVfz" src="img/notch@2x.svg" /></div>
+              <div class="right-side-W8ROXu">
+                <div class="battery-j2M5V3">
+                  <img class="rectangle-NxeYix" src="img/rectangle@2x.svg" />
+                  <img class="combined-shape-NxeYix" src="img/combined-shape-3@2x.svg" />
+                  <img class="rectangle-a8pyVb" src="img/rectangle-1@2x.svg" />
+                </div>
+                <img class="wifi-j2M5V3" src="img/wifi@2x.svg" />
+                <img class="mobile-signal-j2M5V3" src="img/mobile-signal@2x.svg" />
+              </div>
+              <div class="left-side-W8ROXu"><img class="x941-RIFEjI" src="img/9-41@2x.svg" /></div>
+            </div>
+          </div>
+          <a href="quiz-unfiltered.html"><img class="icon-IcPKRJ" src="img/icon@2x.svg" /></a>
+          <div class="quiz-i30098373004494-IcPKRJ valign-text-bottom">Quiz</div>
+          <a href="quiz-filter.html"><img class="icon-wRlxz0" src="img/icon-20@2x.svg" /></a>
+        </div>
+        <div class="navigation-C61RwL">
+          <img class="union-xjb0Rz" src="img/union-7@2x.svg" />
+          <div class="home-indicator-xjb0Rz"></div>
+          <a href="homepage-iterated.html">
+            <div class="group-79-xjb0Rz">
+              <div class="x24-basic-home-jbSSr9"><img class="icon-kh1wEo" src="img/icon-12@2x.svg" /></div>
+              <div class="home-i30746300503-jbSSr9 valign-text-bottom worksans-medium-green-vogue-10px">Home</div>
+            </div></a
+          >
+          <a href="skills-filtered.html">
+            <div class="group-80-xjb0Rz">
+              <img class="icon-oG6d86" src="img/icon-6@2x.svg" />
+              <div class="skills-i30746300510-oG6d86 valign-text-bottom worksans-medium-green-vogue-10px">Skills</div>
+            </div></a
+          >
+          <a href="quiz-unfiltered.html">
+            <div class="group-82-xjb0Rz">
+              <div class="x24-basic-pencil-edit-3AZWbb"><img class="icon-5ZHSOK" src="img/icon-55@2x.svg" /></div>
+              <div class="quiz-i30746300520-3AZWbb valign-text-bottom worksans-medium-green-vogue-10px">Quiz</div>
+            </div></a
+          >
+          <div class="group-81-xjb0Rz">
+            <img class="icon-QcSVD9" src="img/icon-8@2x.svg" />
+            <div class="profile-i30746300531-QcSVD9 valign-text-bottom worksans-medium-green-vogue-10px">Profile</div>
+          </div>
+        </div>
+        <div class="navigation-VMr6Om">
+          <img class="union-LX9J7F" src="img/union-7@2x.svg" />
+          <div class="home-indicator-LX9J7F"></div>
+          <a href="homepage-iterated.html">
+            <div class="group-79-LX9J7F">
+              <div class="x24-basic-home-llfH7j"><img class="icon-Vy6Pjx" src="img/icon-12@2x.svg" /></div>
+              <div class="home-i3076300503-llfH7j valign-text-bottom worksans-medium-green-vogue-10px">Home</div>
+            </div></a
+          >
+          <a href="skills-filtered.html">
+            <div class="group-80-LX9J7F">
+              <img class="icon-yAwoC1" src="img/icon-6@2x.svg" />
+              <div class="skills-i3076300510-yAwoC1 valign-text-bottom worksans-medium-green-vogue-10px">Skills</div>
+            </div></a
+          >
+          <a href="quiz-unfiltered.html">
+            <div class="group-82-LX9J7F">
+              <div class="x24-basic-pencil-edit-Y6LtUC"><img class="icon-aabIEc" src="img/icon-55@2x.svg" /></div>
+              <div class="quiz-i3076300520-Y6LtUC valign-text-bottom worksans-medium-green-vogue-10px">Quiz</div>
+            </div></a
+          >
+          <div class="group-81-LX9J7F">
+            <img class="icon-c0g6h2" src="img/icon-8@2x.svg" />
+            <div class="profile-i3076300531-c0g6h2 valign-text-bottom worksans-medium-green-vogue-10px">Profile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

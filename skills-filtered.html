@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/skills-filtered.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Inter:500,600|Work+Sans:400,700,500,400italic,600|Lato:400,700,500,400italic,600");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+    <input type="hidden" id="anPageName" name="page" value="skills-filtered" />
+    <div class="container-center-horizontal">
+      <div class="skills-filtered screen">
+        <div class="group-13-C61RwL">
+          <div class="gardening-WQXeF1 valign-text-bottom worksans-semi-bold-black-24px">Gardening</div>
+        </div>
+        <div class="group-18-C61RwL">
+          <div class="laundry-0xverS valign-text-bottom worksans-semi-bold-black-24px">Laundry</div>
+        </div>
+        <div class="group-19-C61RwL">
+          <div class="relationships-ebBR7z valign-text-bottom worksans-semi-bold-black-24px">Relationships</div>
+        </div>
+        <div class="group-97-C61RwL">
+          <div class="job-prep-ixNXIO valign-text-bottom worksans-semi-bold-black-24px">Job Prep</div>
+        </div>
+        <div class="x16-options-C61RwL"></div>
+        <div class="group-96-C61RwL">
+          <div class="view-all-3U5qE3 valign-text-bottom">View All</div>
+          <img class="icon-3U5qE3" src="img/icon-21@2x.svg" />
+        </div>
+        <div class="group-98-C61RwL">
+          <div class="view-all-royatl valign-text-bottom">View All</div>
+          <img class="icon-royatl" src="img/icon-21@2x.svg" />
+        </div>
+        <div class="group-94-C61RwL">
+          <div class="view-all-NhvmeG valign-text-bottom">View All</div>
+          <img class="icon-NhvmeG" src="img/icon-21@2x.svg" />
+        </div>
+        <div class="group-95-C61RwL">
+          <div class="view-all-IUHrKR valign-text-bottom">View All</div>
+          <img class="icon-IUHrKR" src="img/icon-21@2x.svg" />
+        </div>
+        <img class="flame-950-2-C61RwL" src="img/flame-950-1@2x.svg" />
+        <img class="flame-183-3-C61RwL" src="img/flame-183-3@2x.svg" />
+        <div class="pro-tip-use-the-skills-quickly-C61RwL">
+          <span class="span0-GWueSz">pro Tip... <br /></span
+          ><span class="span1-GWueSz">Use the filter at the top of the page to find skills quickly!</span>
+        </div>
+        <img class="flame-save-to-bookmarks-2-C61RwL" src="img/flame-save-to-bookmarks-2@2x.svg" />
+        <div class="component-43-C61RwL">
+          <div class="cards-n7P6zT">
+            <div class="group-9-UNrx23"></div>
+            <div class="investing-i363104143016395-UNrx23 valign-text-bottom worksans-semi-bold-white-16px">
+              Plant Care
+            </div>
+            <img class="flame-768-2-UNrx23" src="img/flame-768-2-6@2x.svg" />
+          </div>
+          <div class="cards-9FTAQv">
+            <div class="group-9-8fDA2Q"></div>
+            <div class="investing-i363104153016395-8fDA2Q valign-text-bottom worksans-semi-bold-white-16px">
+              Nutrients
+            </div>
+            <img class="flame-768-2-8fDA2Q" src="img/flame-768-2-6@2x.svg" />
+          </div>
+          <div class="cards-7L5kPz">
+            <div class="group-9-xPvRIl"></div>
+            <div class="investing-i363104163016395-xPvRIl valign-text-bottom">Location</div>
+            <img class="flame-768-2-xPvRIl" src="img/flame-768-2-6@2x.svg" />
+          </div>
+          <div class="cards-BedQsO">
+            <div class="group-9-L93B7b"></div>
+            <div class="investing-i363104173016395-L93B7b valign-text-bottom worksans-semi-bold-white-16px">
+              Germination
+            </div>
+            <img class="flame-768-2-L93B7b" src="img/flame-768-2-6@2x.svg" />
+          </div>
+          <div class="cards-C95BH7">
+            <div class="group-9-XDjY3D"></div>
+            <div class="investing-i363104183016395-XDjY3D valign-text-bottom worksans-semi-bold-white-16px">
+              Growing Food
+            </div>
+            <img class="flame-768-2-XDjY3D" src="img/flame-768-2-6@2x.svg" />
+          </div>
+          <div class="cards-sTfHbG">
+            <div class="group-9-IGqekH"></div>
+            <div class="investing-i363104193016395-IGqekH valign-text-bottom worksans-semi-bold-white-16px">
+              Plant Types
+            </div>
+            <img class="flame-768-2-IGqekH" src="img/flame-768-2-6@2x.svg" />
+          </div>
+        </div>
+        <div class="component-49-C61RwL">
+          <div class="cards-pyS5Nq">
+            <div class="group-9-380DjT"></div>
+            <div class="investing-i367103003016395-380DjT valign-text-bottom worksans-semi-bold-white-16px">
+              Reading Labels
+            </div>
+            <img class="flame-768-2-380DjT" src="img/flame-768-2-12@2x.svg" />
+          </div>
+          <div class="cards-fj6xli">
+            <div class="group-9-ZV3FLx"></div>
+            <div class="investing-i367103013016395-ZV3FLx valign-text-bottom worksans-semi-bold-white-16px">
+              Stain Removal
+            </div>
+            <img class="flame-768-2-ZV3FLx" src="img/flame-768-2-12@2x.svg" />
+          </div>
+          <div class="cards-LWbhIc">
+            <div class="group-9-J8kkZ4"></div>
+            <div class="investing-i367103023016395-J8kkZ4 valign-text-bottom">Water</div>
+            <img class="flame-768-2-J8kkZ4" src="img/flame-768-2-12@2x.svg" />
+          </div>
+          <div class="cards-rCpozY">
+            <div class="group-9-Ajmeqn"></div>
+            <div class="investing-i367103033016395-Ajmeqn valign-text-bottom worksans-semi-bold-white-16px">
+              Folding
+            </div>
+            <img class="flame-768-2-Ajmeqn" src="img/flame-768-2-12@2x.svg" />
+          </div>
+          <div class="cards-HuxKYG">
+            <div class="group-9-xOuuUQ"></div>
+            <div class="investing-i367103043016395-xOuuUQ valign-text-bottom worksans-semi-bold-white-16px">
+              Ironing
+            </div>
+            <img class="flame-768-2-xOuuUQ" src="img/flame-768-2-12@2x.svg" />
+          </div>
+          <div class="cards-M6HcKa">
+            <div class="group-9-dFtpoE"></div>
+            <div class="investing-i367103053016395-dFtpoE valign-text-bottom">Seperate Colours</div>
+            <img class="flame-768-2-dFtpoE" src="img/flame-768-2-12@2x.svg" />
+          </div>
+        </div>
+        <div class="component-50-C61RwL">
+          <div class="cards-nHpJ5I">
+            <div class="group-9-xookaR"></div>
+            <div class="investing-i367103313016395-xookaR valign-text-bottom worksans-semi-bold-white-16px">
+              Boundaries
+            </div>
+            <img class="flame-768-2-xookaR" src="img/flame-768-2-18@2x.svg" />
+          </div>
+          <div class="cards-Z1bwXp">
+            <div class="group-9-qiwDEb"></div>
+            <div class="investing-i367103323016395-qiwDEb valign-text-bottom worksans-semi-bold-white-16px">
+              Breakups
+            </div>
+            <img class="flame-768-2-qiwDEb" src="img/flame-768-2-18@2x.svg" />
+          </div>
+          <div class="cards-guz3Vr">
+            <div class="group-9-DBVFcr"></div>
+            <div class="investing-i367103333016395-DBVFcr valign-text-bottom">Living Together</div>
+            <img class="flame-768-2-DBVFcr" src="img/flame-768-2-18@2x.svg" />
+          </div>
+          <div class="cards-5aZ3Ga">
+            <div class="group-9-9Say0c"></div>
+            <div class="investing-i367103343016395-9Say0c valign-text-bottom">Types of Relationships</div>
+            <img class="flame-768-2-9Say0c" src="img/flame-768-2-18@2x.svg" />
+          </div>
+          <div class="cards-zsMzRD">
+            <div class="group-9-yA43U3"></div>
+            <div class="investing-i367103353016395-yA43U3 valign-text-bottom worksans-semi-bold-white-16px">
+              Flirting
+            </div>
+            <img class="flame-768-2-yA43U3" src="img/flame-768-2-18@2x.svg" />
+          </div>
+          <div class="cards-Tx7cdU">
+            <div class="group-9-pxxQ5h"></div>
+            <div class="investing-i367103363016395-pxxQ5h valign-text-bottom worksans-semi-bold-white-16px">
+              Communication
+            </div>
+            <img class="flame-768-2-pxxQ5h" src="img/flame-768-2-18@2x.svg" />
+          </div>
+        </div>
+        <div class="component-51-C61RwL">
+          <div class="cards-TISeTI">
+            <div class="group-9-dx3VSY"></div>
+            <div class="investing-i367103623016395-dx3VSY valign-text-bottom worksans-semi-bold-white-16px">
+              Cover Letter
+            </div>
+            <img class="flame-768-2-dx3VSY" src="img/flame-768-2-24@2x.svg" />
+          </div>
+          <div class="cards-VpU1EH">
+            <div class="group-9-QV5My2"></div>
+            <div class="investing-i367103633016395-QV5My2 valign-text-bottom worksans-semi-bold-white-16px">
+              Interviews
+            </div>
+            <img class="flame-768-2-QV5My2" src="img/flame-768-2-24@2x.svg" />
+          </div>
+          <div class="cards-PqPWZx">
+            <div class="group-9-IQt43x"></div>
+            <div class="investing-i367103643016395-IQt43x valign-text-bottom">Negotiating</div>
+            <img class="flame-768-2-IQt43x" src="img/flame-768-2-24@2x.svg" />
+          </div>
+          <div class="cards-rBK3rG">
+            <div class="group-9-TLYf4J"></div>
+            <div class="investing-i367103653016395-TLYf4J valign-text-bottom worksans-semi-bold-white-16px">
+              Filtering Jobs
+            </div>
+            <img class="flame-768-2-TLYf4J" src="img/flame-768-2-24@2x.svg" />
+          </div>
+          <div class="cards-OHdqt1">
+            <div class="group-9-DEjxnp"></div>
+            <div class="investing-i367103663016395-DEjxnp valign-text-bottom worksans-semi-bold-white-16px">
+              Networking
+            </div>
+            <img class="flame-768-2-DEjxnp" src="img/flame-768-2-24@2x.svg" />
+          </div>
+          <div class="cards-CbziTy">
+            <div class="group-9-xxhl0y"></div>
+            <div class="investing-i367103673016395-xxhl0y valign-text-bottom worksans-semi-bold-white-16px">
+              CV / Resume
+            </div>
+            <img class="flame-768-2-xxhl0y" src="img/flame-768-2-24@2x.svg" />
+          </div>
+        </div>
+        <div class="header-header-skills-small-C61RwL">
+          <img class="union-cXX2sR" src="img/union-21@2x.svg" />
+          <div class="i-phone-x-11-pro-cXX2sR">
+            <div class="i-phone-x-11-pro-black-fcGnTd">
+              <div class="bg-EndvU5"><img class="notch-hhUKju" src="img/notch@2x.svg" /></div>
+              <div class="right-side-EndvU5">
+                <div class="battery-vhxeNg">
+                  <img class="rectangle-ntdVJe" src="img/rectangle@2x.svg" />
+                  <img class="combined-shape-ntdVJe" src="img/combined-shape-3@2x.svg" />
+                  <img class="rectangle-tFyGNy" src="img/rectangle-1@2x.svg" />
+                </div>
+                <img class="wifi-vhxeNg" src="img/wifi-4@2x.svg" />
+                <img class="mobile-signal-vhxeNg" src="img/mobile-signal-4@2x.svg" />
+              </div>
+              <div class="left-side-EndvU5"><img class="x941-Is5J5t" src="img/9-41@2x.svg" /></div>
+            </div>
+          </div>
+          <div class="skills-i363101763027245-cXX2sR valign-text-bottom">Skills</div>
+          <a href="skils-filter.html"><img class="icon-cXX2sR" src="img/icon-20@2x.svg" /></a>
+        </div>
+        <div class="navigation-variant6-C61RwL">
+          <img class="union-XuXe12" src="img/union-7@2x.svg" />
+          <div class="home-indicator-XuXe12"></div>
+          <a href="homepage-iterated.html">
+            <div class="group-79-XuXe12">
+              <div class="x24-basic-home-XQylJp"><img class="icon-d4Xmw8" src="img/icon-12@2x.svg" /></div>
+              <div class="home-i363101773027289-XQylJp valign-text-bottom worksans-medium-green-vogue-10px">Home</div>
+            </div></a
+          >
+          <div class="group-80-XuXe12">
+            <img class="icon-gFsrOd" src="img/icon-13@2x.svg" />
+            <div class="skills-i363101773027296-gFsrOd valign-text-bottom worksans-medium-green-vogue-10px">Skills</div>
+          </div>
+          <a href="quiz-unfiltered.html">
+            <div class="group-82-XuXe12">
+              <div class="x24-basic-pencil-edit-aBwSBF"><img class="icon-Ed42Ul" src="img/icon-7@2x.svg" /></div>
+              <div class="quiz-i363101773027306-aBwSBF valign-text-bottom worksans-medium-green-vogue-10px">Quiz</div>
+            </div></a
+          >
+          <div class="group-81-XuXe12">
+            <img class="icon-Ae18Lk" src="img/icon-8@2x.svg" />
+            <div class="profile-i363101773027317-Ae18Lk valign-text-bottom worksans-medium-green-vogue-10px">
+              Profile
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
